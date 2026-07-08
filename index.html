@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chá do Davi Lee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="splash-screen">
+        <h2>Seja Bem-vindo(a)! 🍼</h2>
+        <p>Ao Chá de Fraldas Virtual do Davi Lee</p>
+        <button class="btn-entrar" onclick="entrarNoSite()">Abrir o convite</button>
+    </div>
+
+    <div class="app-mobile">
+        
+        <audio id="audio-background" src="data:audio/mp3;base64,COLE_AQUI_O_TEXTO_GERADO" preload="auto" loop></audio>
+
+        <header>
+            <button id="audio-toggle" class="btn-audio-control" onclick="alternarAudio()">▶️</button>
+            
+            <p class="pre-title">Ele está chegando!</p>
+            <h1>Chá do Davi Lee</h1>
+        </header>
+
+        <section class="intro">
+            <p>A mamãe <strong>Erica Garrido</strong> está muito feliz em compartilhar esse momento com você! ☁️💙</p>
+        </section>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="track">
+                
+                <div class="slide">
+                    <img src="foto1.jpg" alt="Foto do Davi Lee 1">
+                </div>
+                
+                <div class="slide">
+                    <img src="foto2.jpg" alt="Foto do Davi Lee 2">
+                </div>
+                
+                <div class="slide">
+                    <img src="foto3.jpg" alt="Foto do Davi Lee 3">
+                </div>
+
+                <div class="slide">
+                    <img src="foto4.jpg" alt="Foto do Davi Lee 4">
+                </div>
+
+                </div>
+        </div>
+
+        <section class="cute-message">
+            <h2>Estou chegando e já quero festa! 🍼</h2>
+            <p>Como nosso encontro será virtual, preparamos uma forma muito fácil de você me presentear.</p>
+        </section>
+
+        <section class="gifts">
+            <h3>Sugestão de Presente</h3>
+            <div class="diaper-box">
+                <span class="diaper-icon">🧷</span>
+                <p>Fraldas P, M ou G</p>
+                <p>Colabore com 50.00, 100.00, 150.00 ou mais</p>
+                <span class="diaper-icon">🧷</span>
+            </div>
+        </section>
+
+        <section class="pix-area">
+            <h3>Envie seu presente por PIX</h3>
+            <p>Use o e-mail da mamãe como chave:</p>
+            
+            <div class="copy-box">
+                <input type="text" id="chave-pix" value="ericagarrido1607@gmail.com" readonly>
+                <button class="btn-copiar" onclick="copiarChave()">Copiar Chave</button>
+            </div>
+            
+            <p id="mensagem-sucesso" class="oculto">✨ Chave copiada com sucesso! ✨</p>
+        </section>
+
+        <footer>
+            <p>Obrigada por fazer parte desse sonho!</p>
+        </footer>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

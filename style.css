@@ -1,0 +1,247 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e0f2fe;
+            display: flex;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            color: #334155;
+        }
+
+        /* Tela Inicial / Splash Screen */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #bae6fd 0%, #e0f2fe 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transition: opacity 0.5s ease;
+        }
+
+        #splash-screen h2 {
+            font-family: 'Fredoka', sans-serif;
+            color: #0284c7;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        #splash-screen p {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .btn-entrar {
+            background: #38bdf8;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            font-family: 'Fredoka', sans-serif;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4);
+            animation: pulsar 2s infinite;
+        }
+
+        @keyframes pulsar {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Container Principal do App */
+        .app-mobile {
+            width: 100%;
+            max-width: 414px;
+            background: #ffffff;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        header {
+            background: #7dd3fc;
+            color: white;
+            text-align: center;
+            padding: 40px 20px 30px;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+            position: relative;
+        }
+
+        /* Botão Controle de Áudio Flutuante */
+        .btn-audio-control {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid white;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .btn-audio-control:active {
+            transform: scale(0.9);
+        }
+
+        .pre-title {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .intro, .cute-message, .gifts, .pix-area {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        /* NOVO CARROSSEL: Totalmente Fluido e Adaptável */
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            width: 100%; /* Ajustado para trabalhar com flex-basis */
+            transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+        }
+
+        .slide {
+            flex: 0 0 100%; /* Garante que cada quadrinho ocupe exatamente 100% da tela visível */
+            padding: 0 20px; /* Mantém o recuo perfeito nas laterais */
+        }
+
+        .slide img {
+            width: 100%;
+            height: 380px; /* Mantém a altura padrão definida */
+            object-fit: cover; /* Recorta a imagem proporcionalmente sem distorcer */
+            border-radius: 24px; /* Suas bordas arredondadas fofas */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background-color: #bae6fd;
+        }
+
+        h2, h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        .diaper-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background: #f0f9ff;
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px dashed #7dd3fc;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #0369a1;
+        }
+
+        .diaper-icon {
+            font-size: 1.8rem;
+        }
+
+        .pix-area {
+            background: #f8fafc;
+            margin: 0 20px 20px;
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .copy-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        input {
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid #cbd5e1;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #475569;
+            background: #f1f5f9;
+        }
+
+        button.btn-copiar {
+            background: #38bdf8;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Quicksand', sans-serif;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button.btn-copiar:active {
+            background: #0284c7;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        #mensagem-sucesso {
+            color: #10b981;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
