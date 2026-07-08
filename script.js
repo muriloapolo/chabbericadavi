@@ -73,3 +73,14 @@
                 })
                 .catch(err => { alert("Erro ao copiar. Por favor, copie manualmente."); });
         }
+        // Detecta automaticamente quando o usuário sai do site, muda de aba ou desliga a tela
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+        // Se a página ficou oculta (saiu ou desligou a tela), pausa o áudio
+        if (verificarAudioValido() && !audio.paused) {
+            audio.pause();
+            btnAudio.innerText = "▶️";
+            console.log("Áudio pausado automaticamente: página ocultada.");
+        }
+    }
+});
